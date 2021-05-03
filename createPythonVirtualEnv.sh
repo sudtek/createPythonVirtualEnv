@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 28 october 2020 yannick sudrie 
+# 03 mai 2021 yannick sudrie 
 # to create a new env under python 2 or 3 (python must be installed)
 # exemple of use :
 #. createPythonVirtualEnv my_env 3
@@ -23,10 +23,13 @@ then PATH_PYTHON=$(which python3)
 fi
 
 # install de virtual env 
-sudo apt-get install python-virtualenv -y
-# Other methos to install
+sudo apt-get install virtualenv -y
+#DEPRECATE sudo apt-get install python-virtualenv -y
+# Other methos to test if virtual env install
+#apt-cache search virtualenv | grep virtualenv
 #sudo easy_install virtualenv
 #sudo pip install virtualenv
+#...
 
 #Setup and Use Virtualenv with python3
 virtualenv -p $PATH_PYTHON ~/$DIR_ENV/$NEW_ENV
