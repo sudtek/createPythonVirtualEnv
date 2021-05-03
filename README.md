@@ -15,6 +15,6 @@ chmod +x createPythonVirtualEnv.sh
 
 #3) run it :
 
-. createPythonVirtualEnv my_env 3
+. createPythonVirtualEnv.sh my_env 3
 
 # !!! YES there is a blank space after the point this gonna altered your current environement and make it persistent !
