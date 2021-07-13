@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 03 mai 2021 yannick sudrie 
+# 13 juillet 2021 yannick sudrie 
 # to create a new env under python 2 or 3 (python must be installed)
 # exemple of use :
 #. createPythonVirtualEnv my_env 3
@@ -44,8 +44,12 @@ echo "Automatic Jump to your new virtual env type the command "
 echo "source activate your new Virtual environement !"
 echo " "
 echo "Welcome into virtualenv $my_env"
+echo " ctrl+d to exit \ close terminal or use command 'deactivate' to quit the virtualenv "
+echo " How to use the virtualenv : https://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html "
 echo "---------------------------------------------------------"
 
-cd ~/$DIR_ENV/$NEW_ENV/bin
+# Goto directory in the new environement 
+cd ~/$DIR_ENV/$NEW_ENV
 
-source activate
+# Activate my new environement
+source ~/$DIR_ENV/$NEW_ENV/bin/activate 
