@@ -36,6 +36,6 @@ or equivalent
 
 #7) Use the commande deactivate to quit current my_env environement OR ctrl+d to exit terminal.
 
- How to use the virtualenv command : https://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html "
+How to use the virtualenv command : https://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html "
 
 # * YES there is a blank space after the point this gonna altered your console and activated my_env environement with python3 and make it persistent untilyou close your terminal !
