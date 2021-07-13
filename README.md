@@ -22,11 +22,14 @@ chmod +x createPythonVirtualEnv.sh
 #4) Later to (re)activate this specific environement chdir to the directrory ~/virtualenvironment/my_env
 
 #5) Reactivate my_env with this command* :
-source my_venv/bin/activate
-or 
-. my_venv/bin/activate
 
-nota : source is equivalent to dot .
+source bin/activate
+
+or equivalent
+
+. bin/activate
+
+
 
 #6) you must see this prompt :
 (my_venv) myuser@mycomputer:~/virtualenvironment/my_env$
