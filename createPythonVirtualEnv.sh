@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# 13 juillet 2021 yannick sudrie 
-# to create a new env under python 2 or 3 (python must be installed)
+# 05 may 2023 yannick sudrie 
+# to create a new env under python 2 or 3 (python must be installed before)
 # exemple of use :
-#. createPythonVirtualEnv my_env 3
+#. createPythonVirtualEnv my_Env 3
 # !!! YES With a space after the point this gonna altered your current environement and make it persistent !!
 # by default the new env use python V2.x
 
-DIR_ENV="virtualenvironment"
+DIR_ENV="virtualEnvironment"
 
 NEW_ENV=$1
-: ${NEW_ENV:="my_env"}
+: ${NEW_ENV:="my_Env"}
 
 PYTHON_VERSION=$2
 : ${PYTHON_VERSION:=2}
@@ -22,7 +22,7 @@ if [ $PYTHON_VERSION -eq 3 ]
 then PATH_PYTHON=$(which python3)
 fi
 
-# install de virtual env 
+# Install de last virtual env 
 sudo apt-get install virtualenv -y
 #DEPRECATE sudo apt-get install python-virtualenv -y
 # Other methos to test if virtual env install
@@ -31,8 +31,16 @@ sudo apt-get install virtualenv -y
 #sudo pip install virtualenv
 #...
 
-#Setup and Use Virtualenv with python3
+# By defaut i choose to create the virtual environement directory by default user directory /home/curent_user adapt to your need !!
+if [ ! -d ~/$DIR_ENV  ] 
+then mkdir ~/$DIR_ENV
+fi
+
+# Setup and Use Virtualenv with python3
 virtualenv -p $PATH_PYTHON ~/$DIR_ENV/$NEW_ENV
+
+# Pause
+read -p "Press Enter to continue" </dev/tty
 
 clear
 # Note : If you lunch the script  with ./createVirtualEnv my_env 3
